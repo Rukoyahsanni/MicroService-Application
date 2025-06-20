@@ -1,0 +1,10 @@
+appName: redis
+appImage: redis
+appVersion: alpine
+replicaCount: 1
+containerPort: 6379
+volumeName: redis-data
+volumeMountPath: /data
+
+serviceType: ClusterIP
+servicePort: 6379

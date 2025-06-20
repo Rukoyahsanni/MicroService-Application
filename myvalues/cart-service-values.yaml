@@ -1,0 +1,13 @@
+appName: cartservice 
+appImage: gcr.io/google-samples/microservices-demo/cartservice
+appVersion: v0.8.0
+replicaCount: 2
+containerPort: 7070
+containerEnvVars:
+- key: PORT
+  value: "8080"
+- key: REDIS_ADDR
+  value: "redis-cart:6379"
+
+
+servicePort: 7070
