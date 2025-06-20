@@ -10,5 +10,6 @@ containerEnvVars:
   value: "1"
 - key: DISABLE_PROFILER
   value: "1"
+probeTime: 0
 
 servicePort: 5000

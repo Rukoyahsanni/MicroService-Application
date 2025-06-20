@@ -8,6 +8,8 @@ containerEnvVars:
   value: "valueone"
 - name: ENV_VAR_ONE
   value: "valuetwo"
+probeTime: 10
+gracePeriod: 5
 
 serviceType: ClusterIP
 servicePort: 8080

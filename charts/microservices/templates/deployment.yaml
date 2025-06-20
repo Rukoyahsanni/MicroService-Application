@@ -24,6 +24,19 @@ spec:
             value: {{.value | quote}}
           {{- end}}
           {{- end}}
+          {{- if .Values.livenessProbe }}
+          readinessProbe:
+            initialDelaySeconds: {{ .Values.probeTime }}
+            periodSeconds: {{ .Values.gracePeriod }}
+            grpc:
+              port: {{ .Values.containerPort }}
+          livenessProbe:
+            initialDelaySeconds: {{ .Values.probeTime }}
+            periodSeconds: {{ .Values.gracePeriod }}
+            grpc:
+              port: {{ .Values.containerPort }}
+          {{- end }}
+          
             
           
           

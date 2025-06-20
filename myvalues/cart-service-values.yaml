@@ -7,7 +7,9 @@ containerEnvVars:
 - key: PORT
   value: "8080"
 - key: REDIS_ADDR
-  value: "redis-cart:6379"
+  value: "rediscart:6379"
+probeTime: 15
+gracePeriod: 10
 
 
 servicePort: 7070
